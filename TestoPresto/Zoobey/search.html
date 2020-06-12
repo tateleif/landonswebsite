@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zoobey Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh'
+        crossorigin='anonymous'>
+        <link rel="shortcut icon" href="file:///C:/Users/Bernie/Desktop/TateCode/TestoPresto/Zoobey/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="file:///C:/Users/Bernie/Desktop/TateCode/TestoPresto/Zoobey/favicon.ico" type="image/x-icon">
+    <script>
+        function showTcZoo() {
+            document.getElementById("tczoo").style = "";
+        }
+        function showNone() {
+            document.getElementById("noresults").style = "";
+        }
+        function hideNone() {
+            document.getElementById("noresults").style = "display: none";
+        }
+        function hideWikipedia() {
+            document.getElementById("wikipedia").style = "display: none";
+        }
+        function showWikipedia() {
+            document.getElementById("wikipedia").style = "";
+        }
+        function hideWikipediaEn() {
+            document.getElementById("wikipediaEn").style = "display: none";
+        }
+        function showWikipediaEn() {
+            document.getElementById("wikipediaEn").style = "";
+        }
+        function hideWikiWiki() {
+            document.getElementById("wikiWiki").style = "display: none";
+        }
+        function showWikiWiki() {
+            document.getElementById("wikiWiki").style = "";
+        }
+        function hideWikiTwitter() {
+            document.getElementById("wikiTwitter").style = "display: none";
+        }
+        function showWikiTwitter() {
+            document.getElementById("wikiTwitter").style = "";
+        }
+        function hideSdZoo() {
+            document.getElementById("sdZoo").style = "display: none";
+        }
+        function showSdZoo() {
+            document.getElementById("sdZoo").style = "";
+        }
+        function hideGoogle() {
+            document.getElementById("google").style = "display: none";
+        }
+        function showGoogle() {
+            document.getElementById("google").style = "";
+        }
+        function hideYahoo() {
+            document.getElementById("yahoo").style = "display: none";
+        }
+        function showYahoo() {
+            document.getElementById("yahoo").style = "";
+        }
+        function hideDuckDuckGo() {
+            document.getElementById("duckDuckGo").style = "display: none";
+        }
+        function showDuckDuckGo() {
+            document.getElementById("duckDuckGo").style = "";
+        }
+        function searchIt() {
+            window.location.replace("file:///C:/Users/Bernie/Desktop/TateCode/TestoPresto/Zoobey/search.html?q=" + searchInput.value);
+            searchInput.value = searchInput.value
+            var words = searchInput.value.split(" ")
+            // console.log(words[0]);
+            // console.log(words[1]);
+            words.forEach(word => {
+                // document.write(word + '<br />');
+                console.log(" You Searched " + word);
+            });
+            var wordone = words[0];
+            var wordtwo = words[1];
+            // document.write(split)
+            hideTcZoo();
+            hideNone();
+            hideWikipedia();
+            hideWikipediaEn();
+            hideWikiWiki();
+            hideWikiTwitter();
+            hideSdZoo();
+            hideGoogle();
+            hideYahoo();
+            if (tczoo.innerHTML.toLowerCase().search(wordone) > -1 & tczoo.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showTcZoo();
+            }
+            if (wikipedia.innerHTML.toLowerCase().search(wordone) > -1 & wikipedia.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showWikipedia();
+            }
+            if (wikipediaEn.innerHTML.toLowerCase().search(wordone) > -1 & wikipediaEn.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showWikipediaEn();
+            }
+            if (wikiWiki.innerHTML.toLowerCase().search(wordone) > -1 & wikiWiki.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showWikiWiki();
+            }
+            if (wikiTwitter.innerHTML.toLowerCase().search(wordone) > -1 & wikiTwitter.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showWikiTwitter();
+            }
+            if (sdZoo.innerHTML.toLowerCase().search(wordone) > -1 & sdZoo.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showSdZoo();
+            }
+            if (google.innerHTML.toLowerCase().search(wordone) > -1 & google.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showGoogle();
+            }
+            if (yahoo.innerHTML.toLowerCase().search(wordone) > -1 & yahoo.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showYahoo();
+            }
+            if (duckDuckGo.innerHTML.toLowerCase().search(wordone) > -1 & duckDuckGo.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showDuckDuckGo();
+            }
+        }
+        function hideTcZoo() {
+            document.getElementById("tczoo").style = "display: none";
+        }
+    </script>
+</head>
+
+<body style="background-image: url('leaves.jpg');" class="container mt-4">
+    <div class="input-group mb-3">
+        <input type="search" id="searchInput" style="display:inline-block" placeholder="Search the web" class="form-control w-75">
+        <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2" type="button" onclick="searchIt()">
+                    <i class="fa fa-search"></i>
+            </span>
+        </div>
+    </div>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;color:blue">Zoobey</h1>
+    <div id="tczoo">
+        <a href="https://tateleif.github.io/Zoo/">
+            <h3>Tate & Cooper's Zoo</h3>
+        </a>
+        <h6>Welcome to the zoo! Tate and Cooper's zoo, Chanhassen, MN</h6>
+    </div>
+    <div id="wikipedia">
+        <a href="https://www.wikipedia.org/">
+            <h3>Wikipedia</h3>
+        </a>
+        <h6>Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by
+            the Wikimedia Foundation.</h6>
+    </div>
+    <div id="wikipediaEn">
+        <a href="https://en.wikipedia.org/wiki/Main_Page">
+            <h3>Wikipedia, the Free Encyclopedia</h3>
+        </a>
+        <h6>Adore is the fourth studio album by the American alternative rock band The Smashing Pumpkins (vocalist
+            Billy Corgan pictured), released on June 2, 1998, by ...</h6>
+    </div>
+    <div id="wikiWiki">
+        <a href="https://en.wikipedia.org/wiki/Wikipedia">
+            <h3>Wikipedia - Wikipedia</h3>
+        </a>
+        <h6>Wikipedia (/ˌwɪkɪˈpiːdiə/ ( About this sound listen) wik-ih-PEE-dee-ə or /ˌwɪkiˈpiːdiə/ ( About this sound
+            listen) wik-ee-PEE-dee-ə) (abbreviated as WP) ...</h6>
+    </div>
+    <div id="wikiTwitter">
+        <a href="https://twitter.com/Wikipedia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+            <h3>Wikipedia (@Wikipedia) • Twitter</h3>
+        </a>
+    </div>
+    <div id="sdZoo">
+        <a href="https://zoo.sandiegozoo.org/">
+            <h3>San Diego Zoo® Official Site | Voted #1 Zoo in the World</h3>
+        </a>
+        <h6>The San Diego Zoo and San Diego Zoo Safari Park are temporarily closed. For assistance, please ask our Chat
+            Bot, or click here to email us. READ MORE ▸.</h6>
+    </div>
+    <div id="google" class="result__snippet js-result-snippet">
+        <a href="https://www.google.com/search">
+            <h3>Google search</h3>
+        </a>
+        <h6>Search for web content, images, videos, news, and maps. Log in for access to Gmail and Google Drive. Find
+            Android apps using Google Play.</h6>
+    </div>
+    <div id="yahoo">
+        <a href="https://search.yahoo.com/">
+            <h3>Yahoo Search - Web Search</h3>
+        </a>
+        <h6>The search engine that helps you find exactly what you're looking for. Find the most relevant information,
+            video, images, and answers from all across the Web.</h6>
+    </div>
+    <div id="duckDuckGo">
+        <a href="https://duckduckgo.com">
+            <h3>DuckDuckGo - Privacy, simplified.</h3>
+        </a>
+        <h6>The Search Engine That Doesn't Track You. Also Check Out Our Free Online Privacy Solution. Available For
+            All Your Devices.</h6>
+    </div>
+    <div id="noresults">
+        <h1>No search Results</h1>
+        Could not find anything realated to your search.
+    </div>
+    <script>
+        hideTcZoo();
+        hideNone();
+        hideWikipedia();
+        hideWikipediaEn();
+        hideWikiWiki();
+        hideWikiTwitter();
+        hideSdZoo();
+        hideGoogle();
+        hideYahoo();
+        hideDuckDuckGo();
+    </script>
+</body>
+
+</html>

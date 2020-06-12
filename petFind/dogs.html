@@ -1,0 +1,210 @@
+<html>
+
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+<script>
+  function changeAnimals(sender) {
+            // alert(sender.value);
+            //document.getElementById("all").style = "display: none";
+            hideCoopersCoast();
+            hideMinnesotaTrail();
+            hideEvergladeFun();
+            hideAfricaArea();
+            // alert(sender.value);
+            if (sender.value == "all") {
+                // alert("in the all");
+                showCoopersCoast();
+                showMinnesotaTrail();
+                showEvergladeFun();
+                showAfricaArea();
+            } else {
+                // alert("in the else");
+                //alert(sender.value);
+                var exhibit = document.getElementById(sender.value);
+                //https://thevlm.org/wp-content/uploads/Alligator-v2-300x200.jpgalert(exhibit.innerHTML);
+                exhibit.style = "";
+            }
+        }
+
+        function hideMama() {
+            document.getElementById("mama").style = "display: none";
+        }
+
+        function hideAllie() {
+            document.getElementById("allie").style = "display: none";
+        }
+
+        function hideLilac() {
+            document.getElementById("lilac").style = "display: none";
+        }
+
+        function hideRose() {
+            document.getElementById("rose").style = "display: none";
+        }
+
+        function showMama() {
+            document.getElementById("mama").style = "";
+        }
+
+        function showAllie() {
+            document.getElementById("allie").style = "";
+        }
+
+        function showLilac() {
+            document.getElementById("lilac").style = "";
+        }
+
+        function showRose() {
+            document.getElementById("rose").style = "";
+        }
+</script>
+</head>
+
+<body class="container">
+  <select id="cars" name="carlist" form="carform">
+    <option value="All">All types</option>
+    <option value="Shepard">Shepard</option>
+    <option value="Bulldog">Bulldog</option>
+    <option value="Poodle">Poodle</option>
+    <option value="Labrador">Labrador</option>
+    <option value="Retriever">Retriever</option>
+    <option value="Beagle">Beagle</option>
+    <option value="Terrier">Terrier</option>
+    <option value="Dachsund">Dachsund</option>
+    <option value="Chihuahua">Chihuahua</option>
+    <option value="Husky">Husky</option>
+    <option value="Boxer">Boxer</option>
+    <option value="Shi tzu">Shi tzu</option>
+    <option value="Rotweiler">Rotweiler</option>
+    <option value="Great dane">Great dane</option>
+    <option value="Spaniel">Spaniel</option>
+    <option value="Pitt bull">Pitt bull</option>
+    <option value="Maltese">Maltese</option>
+    <option value="Mix">Mix</option>
+
+
+  </select>
+  <select>
+    <option value="All2">All places</option>
+    <option value="Secondhand Hounds">Secondhand Hounds</option>
+    <option value="Animal humane society">Animal humane society</option>
+    <option value="The Adopt-a-pet shop">The Adopt-a-pet shop</option>
+    <option value="Angel of hope Animal rescue">Angel of hope Animal rescue</option>
+    <option value="Ragum">Ragum</option>
+  </select>
+  <br />
+  <div class="card-group">
+
+    <div id="wasabi" class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://t7-live-ahsd8.nyc3.cdn.digitaloceanspaces.com/animalhumanesociety.org/files/styles/animal_450x330/flypub/adoption/images/large/2020/05/08/24b33fcb-d286-4c9a-bdf7-d097c54f3bbe.jpg?h=8a14a818&itok=EFhX1vRJ"
+        alt="Card image cap">
+      <h4>Wasabi</h4>
+      <h4></h4>
+      <h6></h6>
+      <a href="https://www.animalhumanesociety.org/animal/adoption/43968086" target="_blank" class="btn btn-primary mt-auto">
+        Visit
+      </a>
+    </div>
+    <div id="hershel"class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://t7-live-ahsd8.nyc3.cdn.digitaloceanspaces.com/animalhumanesociety.org/files/styles/animal_450x330/flypub/adoption/images/large/2020/05/03/59694d10-c2ac-4824-8549-bf6bd0c36027.jpg?h=7867c5e2&itok=W6ogdx2N"
+        alt="Card image cap">
+      <h4>Hershel</h4>
+      <h4></h4>
+      <h6></h6>
+      <a href="https://www.animalhumanesociety.org/animal/adoption/44240397" target="_blank" class="btn btn-primary mt-auto">
+        Visit
+      </a>
+    </div>
+    <div id="dot"class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15509/15509264/71754685_500x745.jpg"
+          alt="Card image cap">
+        <h4>Dot</h4>
+        <h4></h4>
+        <h6></h6>
+        <a href="https://www.animalhumanesociety.org/animal/adoption/44240397" target="_blank" class="btn btn-primary mt-auto">
+          Visit
+        </a>
+      </div>
+    <div id="rose"class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15629/15629272/72472963_500x388.jpg"
+        alt="Card image cap">
+      <h4>Rose</h4>
+      <a href="https://secondhandhounds.org/dog/15629272/" target="_blank" class="btn btn-primary mt-auto">
+        Visit
+      </a>
+    </div>
+  </div>
+  <div class="card-group">
+    <div id="phar"class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15635/15635024/72473175_500x310.jpg"
+          alt="Card image cap">
+        <h4>Pharnaces</h4>
+        <a href="https://secondhandhounds.org/dog/15635024/" target="_blank" class="btn btn-primary mt-auto">
+          Visit
+        </a>
+      </div>
+      <div id="roman"class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15635/15635031/72473201_500x375.jpg"
+            alt="Card image cap">
+          <h4>Roman</h4>
+          <a href="https://secondhandhounds.org/dog/15635031/" target="_blank" class="btn btn-primary mt-auto">
+            Visit
+          </a>
+        </div>
+        <div id="kilo"class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15635/15635071/72473242_500x375.jpg"
+              alt="Card image cap">
+            <h4>Kilo</h4>
+            <a href="https://secondhandhounds.org/dog/15635071/" target="_blank" class="btn btn-primary mt-auto">
+              Visit
+            </a>
+          </div>
+          <div id="buster"class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15632/15632329/72447369_500x500.jpg"
+                alt="Card image cap">
+              <h4>Buster - *Blind*</h4>
+              <a href="https://secondhandhounds.org/dog/15632329/" target="_blank" class="btn btn-primary mt-auto">
+                Visit
+              </a>
+            </div>
+  </div>
+  <div class="card-group">
+      <div id="marnie"class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15619/15619073/72370049_500x500.jpg"
+            alt="Card image cap">
+          <h4>Marnie</h4>
+          <a href="https://secondhandhounds.org/dog/15632329/" target="_blank" class="btn btn-primary mt-auto">
+            Visit
+          </a>
+        </div>
+        <div id="cocoa"class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15557/15557322/72069787_500x500.jpg"
+              alt="Card image cap">
+            <h4>Cocoa</h4>
+            <a href="https://secondhandhounds.org/dog/15557322/" target="_blank" class="btn btn-primary mt-auto">
+              Visit
+            </a>
+          </div>
+          <div id="nile"class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15524/15524938/71844801_500x333.jpg"
+                alt="Card image cap">
+              <h4>Nile</h4>
+              <a href="https://secondhandhounds.org/dog/15557322/" target="_blank" class="btn btn-primary mt-auto">
+                Visit
+              </a>
+            </div>
+            <div id="nash"class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://s3.amazonaws.com/filestore.rescuegroups.org/3699/pictures/animals/15524/15524936/71844772_500x426.jpg"
+                  alt="Card image cap">
+                <h4>Nash</h4>
+                <a href="https://secondhandhounds.org/dog/15524936/" target="_blank" class="btn btn-primary mt-auto">
+                  Visit
+                </a>
+              </div>
+              
+</div>
+</body>
+
+</html>
