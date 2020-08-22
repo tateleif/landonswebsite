@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Zoobey Search</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,17 +14,11 @@
         function hideTcZoo() {
             document.getElementById("tczoo").style = "display: none";
         }
-        function showNone() {
-            document.getElementById("noresults").style = "";
-        }
-        function hideNone() {
-            document.getElementById("noresults").style = "display: none";
-        }
         function hideWikipedia() {
             document.getElementById("wikipedia").style = "display: none";
         }
         function showWikipedia() {
-            document.getElementById("wikipedia").style = "";
+            document.getElementById("wikipedia").style = ""; 
         }
         function hideWikipediaEn() {
             document.getElementById("wikipediaEn").style = "display: none";
@@ -70,62 +64,77 @@
         }
         function hideWikiAnimal() {
             document.getElementById("wikiAnimal").style = "display: none";
-            console.log("Hiding")
         }
         function showWikiAnimal() {
             document.getElementById("wikiAnimal").style = "";
         }
-        function hideAll() {
-        hideTcZoo();
-        hideNone();
-        hideWikipedia();
-        hideWikipediaEn();
-        hideWikiWiki();
-        hideWikiTwitter();
-        hideSdZoo();
-        hideGoogle();
-        hideYahoo();
-        hideDuckDuckGo();
-        hideWikiAnimal();
+        function hideNGKAnimal() {
+            document.getElementById("nGKAnimal").style = "display: none";
+        }
+        function showNGKAnimal() {
+            document.getElementById("nGKAnimal").style = "";
+        }
+        function hideSpace() {
+            document.getElementById("space").style = "display: none";
+        }
+        function showSpace() {
+            document.getElementById("space").style = "";
+        }
+        function hideSpaceNews() {
+            document.getElementById("spaceNews").style = "display: none";
+        }
+        function showSpaceNews() {
+            document.getElementById("spaceNews").style = "";
+        }
+        function hideHomeAlone1() {
+            document.getElementById("homeAlone1").style = "display: none";
+        }
+        function showHomeAlone1() {
+            document.getElementById("homeAlone1").style = "";
         }
         function searchIt() {
-            searchInput.value = searchInput.value
+            hideTcZoo();
+            hideWikipedia();
+            hideWikipediaEn();
+            hideWikiWiki();
+            hideWikiTwitter();
+            hideSdZoo();
+            hideGoogle();
+            hideYahoo();
+            hideDuckDuckGo();
+            hideWikiAnimal();
+            hideNGKAnimal();
+            hideSpace();
+            hideSpaceNews();
+            hideHomeAlone1();
             var words = searchInput.value.split(" ")
             // console.log(words[0]);
             // console.log(words[1]);
             words.forEach(word => {
                 // document.write(word + '<br />');
-                console.log(" You Searched " + word);
             });
             var wordone = words[0];
             var wordtwo = words[1];
             // document.write(split)
             if (tczoo.innerHTML.toLowerCase().search(wordone) > -1 & tczoo.innerHTML.toLowerCase().search(wordtwo) > -1) {
-                hideAll();
                 showTcZoo();
             }
             if (wikipedia.innerHTML.toLowerCase().search(wordone) > -1 & wikipedia.innerHTML.toLowerCase().search(wordtwo) > -1) {
-                hideAll();
                 showWikipedia();
             }
             if (wikipediaEn.innerHTML.toLowerCase().search(wordone) > -1 & wikipediaEn.innerHTML.toLowerCase().search(wordtwo) > -1) {
-                hideAll();
                 showWikipediaEn();
             }
             if (wikiWiki.innerHTML.toLowerCase().search(wordone) > -1 & wikiWiki.innerHTML.toLowerCase().search(wordtwo) > -1) {
-                hideAll();
                 showWikiWiki();
             }
             if (wikiTwitter.innerHTML.toLowerCase().search(wordone) > -1 & wikiTwitter.innerHTML.toLowerCase().search(wordtwo) > -1) {
-                hideAll();
                 showWikiTwitter();
             }
             if (sdZoo.innerHTML.toLowerCase().search(wordone) > -1 & sdZoo.innerHTML.toLowerCase().search(wordtwo) > -1) {
-                hideAll();
                 showSdZoo();
             }
             if (google.innerHTML.toLowerCase().search(wordone) > -1 & google.innerHTML.toLowerCase().search(wordtwo) > -1) {
-                hideAll();
                 showGoogle();
             }
             if (yahoo.innerHTML.toLowerCase().search(wordone) > -1 & yahoo.innerHTML.toLowerCase().search(wordtwo) > -1) {
@@ -136,6 +145,18 @@
             }
             if (wikiAnimal.innerHTML.toLowerCase().search(wordone) > -1 & wikiAnimal.innerHTML.toLowerCase().search(wordtwo) > -1) {
                 showWikiAnimal();
+            }
+            if (nGKAnimal.innerHTML.toLowerCase().search(wordone) > -1 & nGKAnimal.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showNGKAnimal();
+            }
+            if (space.innerHTML.toLowerCase().search(wordone) > -1 & space.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showSpace();
+            }
+            if (spaceNews.innerHTML.toLowerCase().search(wordone) > -1 & spaceNews.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showSpaceNews();
+            }
+            if (homeAlone1.innerHTML.toLowerCase().search(wordone) > -1 & homeAlone1.innerHTML.toLowerCase().search(wordtwo) > -1) {
+                showHomeAlone1();
             }
         }
     </script>
@@ -151,79 +172,98 @@
         </div>
     </div>
     <h1 style="font-family: Arial, Helvetica, sans-serif;color:blue">Zoobey</h1>
-    <div id="tczoo">
+    <div id="tczoo" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://tateleif.github.io/Zoo/">
             <h3>Tate & Cooper's Zoo</h3>
         </a>
         <h6>Welcome to the zoo! Tate and Cooper's zoo, Chanhassen, MN</h6>
     </div>
-    <div id="wikipedia">
+    <div id="wikipedia" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://www.wikipedia.org/">
             <h3>Wikipedia</h3>
         </a>
         <h6>Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by
             the Wikimedia Foundation.</h6>
     </div>
-    <div id="wikipediaEn">
+    <div id="wikipediaEn" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://en.wikipedia.org/wiki/Main_Page">
             <h3>Wikipedia, the Free Encyclopedia</h3>
         </a>
         <h6>Adore is the fourth studio album by the American alternative rock band The Smashing Pumpkins (vocalist
             Billy Corgan pictured), released on June 2, 1998, by ...</h6>
     </div>
-    <div id="wikiWiki">
+    <div id="wikiWiki" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://en.wikipedia.org/wiki/Wikipedia">
             <h3>Wikipedia - Wikipedia</h3>
         </a>
         <h6>Wikipedia (/ˌwɪkɪˈpiːdiə/ ( About this sound listen) wik-ih-PEE-dee-ə or /ˌwɪkiˈpiːdiə/ ( About this sound
             listen) wik-ee-PEE-dee-ə) (abbreviated as WP) ...</h6>
     </div>
-    <div id="wikiTwitter">
+    <div id="wikiTwitter" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://twitter.com/Wikipedia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
             <h3>Wikipedia (@Wikipedia) • Twitter</h3>
         </a>
     </div>
-    <div id="sdZoo">
+    <div id="sdZoo" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://zoo.sandiegozoo.org/">
             <h3>San Diego Zoo® Official Site | Voted #1 Zoo in the World</h3>
         </a>
         <h6>The San Diego Zoo and San Diego Zoo Safari Park are temporarily closed. For assistance, please ask our Chat
             Bot, or click here to email us. READ MORE ▸.</h6>
     </div>
-    <div id="google" class="result__snippet js-result-snippet">
+    <div id="google" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://www.google.com/search">
             <h3>Google search</h3>
         </a>
         <h6>Search for web content, images, videos, news, and maps. Log in for access to Gmail and Google Drive. Find
             Android apps using Google Play.</h6>
     </div>
-    <div id="yahoo">
+    <div id="yahoo" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://search.yahoo.com/">
             <h3>Yahoo Search - Web Search</h3>
         </a>
         <h6>The search engine that helps you find exactly what you're looking for. Find the most relevant information,
             video, images, and answers from all across the Web.</h6>
     </div>
-    <div id="duckDuckGo">
+    <div id="duckDuckGo" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://duckduckgo.com">
             <h3>DuckDuckGo - Privacy, simplified.</h3>
         </a>
         <h6>The Search Engine That Doesn't Track You. Also Check Out Our Free Online Privacy Solution. Available For
             All Your Devices.</h6>
     </div>
-    <div id="wikiAnimal">
+    <div id="wikiAnimal" style="background-color:white; border-radius: 15px" class="container">
         <a href="https://en.wikipedia.org/wiki/Animal">
-            <h3>Animal - Wikipedia</h3>
+            <h3>Animals - Wikipedia</h3>
         </a>
-        <h6>Animals are multicellular eukaryotic organisms that form the biological kingdom Animalia. With few exceptions, animals consume organic material, breathe ...</h6>
+        <h6>Animals (also called Metazoa) are multicellular eukaryotic organisms that form the biological kingdom Animalia. With few exceptions, animals consume organic ...</h6>
     </div>
-    <div id="noresults">
-        <h1>No search Results</h1>
-        Could not find anything realated to your search.
+    <div id="nGKAnimal" style="background-color:white; border-radius: 15px" class="container">
+        <a href="https://kids.nationalgeographic.com/animals/">
+            <h3>Animals - National Geographic Kids</h3>
+        </a>
+        <h6>Animal Types. Mammals. Mammals. See All. Birds. Birds. See all. Reptiles. Reptiles. See all. Amphibians. Amphibians. See all. Invertebrates. Invertebrates.</h6>
+    </div>
+    <div id="space" style="background-color:white; border-radius: 15px" class="container">
+        <a href="https://space.com">
+            <h3>Space.com: NASA, Space Exploration and Astronomy News</h3>
+        </a>
+        <h6>Get the latest space exploration, innovation and astronomy news. Space.com celebrates humanity's ongoing expansion across the final frontier.</h6>
+    </div>
+    <div id="spaceNews" style="background-color:white; border-radius: 15px" class="container">
+            <a href="https://www.space.com/news">
+                <h3>Space News - Latest Space and Astronomy News - Space.com</h3>
+            </a>
+            <h6>Space.com is your source for the latest astronomy news and space discoveries, live coverage of space flights and the science of space travel.</h6>
+    </div>
+    <div id="homeAlone1" style="background-color:white; border-radius: 15px" class="container">
+            <a href="https://en.wikipedia.org/wiki/Home_Alone">
+                <h3>Home Alone - Wikipedia</h3>
+            </a>
+            <h6>Home Alone is a 1990 American Christmas comedy film written and produced by John Hughes and directed by Chris Columbus. It stars Macaulay Culkin, Joe Pesci, Daniel Stern, John Heard, and Catherine O'Hara.</h6>
     </div>
     <script>
         hideTcZoo();
-        hideNone();
         hideWikipedia();
         hideWikipediaEn();
         hideWikiWiki();
@@ -233,7 +273,10 @@
         hideYahoo();
         hideDuckDuckGo();
         hideWikiAnimal();
+        hideNGKAnimal();
+        hideSpace();
+        hideSpaceNews();
+        hideHomeAlone1();
     </script>
-</body>
-
+    </body>
 </html>
